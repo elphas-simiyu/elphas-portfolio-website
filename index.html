@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Elphas Simiyu Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            padding-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .text-container {
+            opacity: 0;
+            transform: scale(0.5);
+            text-align: center;
+            transition: opacity 3s ease-out, transform 5s ease-out;
+        }
+
+        .text-container.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .container {
+            padding: 20px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(25, 25, 83, 0.5);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .skills-grid, .projects-grid, .certifications-grid, .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        h2:hover, h3:hover {
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Parallax Backgrounds */
+        .parallax {
+            position: relative;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 300px;
+        }
+
+        .parallax-1 {
+            background-image: url('b1.JPG');
+        }
+
+        .parallax-2 {
+            background-image: url('b2.JPG');
+        }
+
+        .parallax-3 {
+            background-image: url('b3.JPG');
+        }
+        .parallax-4 {
+            background-image: url('b4.PNG');
+        }
+        .parallax-5 {
+            background-image: url('b5.PNG');
+        }
+
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+     <!-- Background -->
+     <div class="background">
+        <video autoplay loop muted class="background-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <section>
+            <div class="text-container" id="animated-text">
+                 <h1>Elphas Simiyu</h1>
+        <p>BSc. Computer Science | Robotics, AI, & Web Development Enthusiast</p>
+ 
+            </div>
+        </section>
+    </header>
+
+    <!-- Parallax Background 1 -->
+    <div class="parallax parallax-1"></div>
+
+    <!-- Professional Summary -->
+    <section class="content">
+        <h2>Professional Summary</h2>
+        <p>
+            I am a Computer Science undergraduate specializing in Robotics, Artificial Intelligence,Data Science and web development. I am passionate about solving real-world problems through innovative technology solutions.
+        </p>
+    </section>
+
+    <!-- Parallax Background 2 -->
+    <div class="parallax parallax-2"></div>
+
+    <!-- Skills and Expertise -->
+    <section>
+        <h2>Skills and Expertise</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <h3>Programming Languages</h3>
+                <p>Python, Java, C++, C#, JavaScript</p>
+            </div>
+            <div class="card">
+                <h3>Frameworks & Tools</h3>
+                <p>React, Flask, Django, Unity</p>
+            </div>
+            <div class="card">
+                <h3>Other Skills</h3>
+                <p>Problem-solving, teamwork, communication</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Background 3 -->
+    <div class="parallax parallax-3"></div>
+
+    <!-- Projects -->
+    <section>
+        <h2><center>Projects</center></h2>
+        <div class="projects-grid">
+            <h2>Completed Projects</h2>
+            <div class="card">
+                <h3>Learning Website</h3>
+                <p>This is a website used to provide people with both general and academic knowledge to help them expand their understundings in the field of their choices.</p>
+            </div>
+            <div class="card">
+                <h3>Next Step Solution</h3>
+                <p>A platform campaigning in helping to reduce most of the societal isues like poverty, hunger etc.</p>
+            </div>
+                
+            <h2>On going projects</h2>
+           
+            <div class="card">
+                <h3>Smart Water Management System</h3>
+                <p>Designed a sensor-based system to optimize water usage in agriculture. Technologies Used: Arduino, Python, IoT, Machine Learning.</p>
+            </div>
+            <div class="card">
+                <h3>Health Tracker App</h3>
+                <p>Developed a mobile app for real-time health monitoring. Technologies Used: Kotlin, Firebase.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Parallax Background 4 -->
+    <div class="parallax parallax-4"></div>
+
+
+    <section>
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+            <div class="card">
+                <h3>Am certified in the following areas</h3>
+                <ul>Mobile Development</ul>
+                <ul>Wed Development</ul>
+                <ul>Cyber Security</ul>
+                <ul>Data Science</ul>
+            </div>
+            <div class="card">
+                <h3>Still perfecting on these areas</h3>
+                <ul>Artificial Intelligence and Machine Learning</ul>
+                <ul>Computer Aided Design</ul>
+                <ul>Robotics</ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parllax Background 5 -->
+    <div class="parallax parallax-5"></div>
+    <section>
+        <h2>Companies/Organisations Worked With</h2>
+        <div class="Organisations-grid">
+            <div class="card">
+                <h3>I have worked with the following Organisations</h3>
+                <ul>Boston Dynamics <i>as a hardware designer</i></ul>
+                <ul>Microsoft <i>as a web designer</i></ul>
+                <ul>Google <i>as a Data Scientist</i></ul>
+                <ul>Meta <i>as web designer</i></ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section>
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Connect with me: <a href="https://github.com/elphas-simiyu" _blank>GitHub</a> | <a href="https://www.linkedin.com/in/elphas-simiyu-41538b334">LinkedIn</a> | <a href="https://x.com/esslucksim">X</a></p>
+    </footer>
+    <script>
+        // Use the Intersection Observer API
+        const textContainer = document.getElementById('animated-text');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    textContainer.classList.add('active');
+                } else {
+                    textContainer.classList.remove('active');
+                }
+            });
+        });
+
+        // Observe the target element
+        observer.observe(textContainer);
+    </script>
+</body>
+</html>
